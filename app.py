@@ -3,6 +3,14 @@ import pandas as pd
 import numpy as np
 import joblib 
 
+import streamlit as st
+
+try:
+    import joblib
+    st.write("✅ joblib imported successfully")
+except ModuleNotFoundError:
+    st.write("❌ joblib NOT found")
+
 #load the data
 model=joblib.load('Linear_Regression_model.pkl')
 
